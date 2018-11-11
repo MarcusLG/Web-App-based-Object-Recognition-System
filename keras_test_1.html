@@ -1,23 +1,37 @@
 <html>
-	<header>
+	<header style=" font-family:'Myriad Pro'; background-color: #e2302d; text-align: center; margin: 0px 0px">
 		<h1>Durian Recognition System</h1>
 		</header>
 	<head>
 		<style>
 		input[type=button], input[type=file], input[type=reset] {
-   			background-color: white;
+   			background-color: #859900;
     		border: none;
-    		color: #0099ff;
-    		padding: 4px 8px;
+    		color: #859900;
+    		font-size: 30px;
+    		text-align: center;
+    		padding: 10px 10px;
     		text-decoration: none;
-    		margin: 4px 2px;
+    		margin: 0px 0px;
+    		cursor: pointer;
+		}
+		button{
+   			background-color: #859900;
+    		border: none;
+    		color: white;
+    		font-size: 30px;
+    		text-align: center;
+    		padding: 10px 10px;
+    		text-decoration: none;
+    		margin: 10px 0px;
     		cursor: pointer;
 		}
 		body {
-		    background: lightblue url("Blue Black.jpg") no-repeat fixed center;
-		    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    background-color: #002b36;
+		    font-family: 'Consola';
 		    font-size: 20px;
 		    text-align: center;
+		    margin: 40px 0px;
 		}
 
 		h1 {
@@ -26,7 +40,7 @@
 		}
 
 		p {
-		    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		    font-family: 'Consola';
 		    font-size: 20px;
 		    color: white;
 		}
@@ -35,7 +49,6 @@
 	<!-- Load TensorFlow.js -->
 		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<p>_____________________________________________________</p>
 		<p>This web-app identifies up to 4 classes of Durio zibethinus cultivars</p>
 		<p id="Line_1"></p>
 		<p id="Line_2"></p>
@@ -56,13 +69,14 @@
             <!––Predict Button––>
             <button type="button" id="predict-button" >Predict</button>
         </div>
-        <p>
-        	_____________________________________________________
-        </p>
-    	<div style="position: absolute; font-size:15px; bottom: 0; right:10px; color: white">
-    		Marcus Lim 2018, All rights reserved
+    	<div>
+    		<p style="position: absolute; font-size:10px; bottom: 0px; right:10px; color: white">Copyright © 2018 Marcus Lim <br> All rights reserved </p>
     	</div>
-        <img id='output' style="height:300px; width:300px">
+        <img id='output'">
+        <script>
+        var img_durian=document.getElementById('output');
+		img_durian.src='http://192.168.1.29:8080/durian.png';
+        </script>
 		<script src=script.js>   	</script>
 	</body>
 </html>
