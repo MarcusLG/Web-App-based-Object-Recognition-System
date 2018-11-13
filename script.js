@@ -1,3 +1,8 @@
+var img_durian=document.getElementById('output');
+img_durian.src='http://192.168.1.29:8080/durian.png';
+img_durian.width=668*500/854;
+img_durian.height=854*400/668;
+
 var openFile = function(file) {
 	var input = file.target;
 	var reader = new FileReader();
@@ -5,6 +10,8 @@ var openFile = function(file) {
 		var dataURL = reader.result;
 		var output = document.getElementById('output');
 		output.src = dataURL;
+        output.width=400;
+        output.height=400;
 	};
 	reader.readAsDataURL(input.files[0]);
 };
